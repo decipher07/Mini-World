@@ -1,6 +1,6 @@
 import React from '/react';
 
-function player() {
+function Player() {
     return (
         <div>
             <h1>Welcome To Spotify</h1>
@@ -8,4 +8,4 @@ function player() {
     )
 }
 
-export default player ;
+export default Player ;
