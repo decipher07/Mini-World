@@ -4,11 +4,13 @@ import Login from './Login'
 import { getTokenFromUrl } from './spotify';
 import SpotifyWebApi from "spotify-web-api-js"
 import Player from './Player';
+import { useDataLayerValue } from './Datalayer'
 
 const spotify = new SpotifyWebApi();
 
 function App() {
-  const [token, setToken] = useState(null)
+  const [token, setToken] = useState(null);
+  const [{}, dispatch] = useDataLayerValue();
 
   // Useful for Code Conditions // [] => Run Once , if [name] => Run Everytime Name Changes 
   useEffect(() => {
