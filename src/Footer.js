@@ -23,11 +23,11 @@ function Footer() {
                 </div>
             </div>
             <div className="footer__center">
-                <ShuffleIcon classname="footer__green" />
-                <SkipPreviousIcon classname="footer__icon" />
+                <ShuffleIcon className="footer__green" />
+                <SkipPreviousIcon className="footer__icon" />
                 <PlayCircleOutlineIcon fontSize="large" className="footer__icon" />
-                <SkipNextIcon classname="footer__icon" />
-                <RepeatIcon classname="footer__green" />
+                <SkipNextIcon className="footer__icon" />
+                <RepeatIcon className="footer__green" />
             </div>
             <div className="footer__right">
                 <Grid container spacing={2}>
