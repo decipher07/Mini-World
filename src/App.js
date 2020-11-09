@@ -21,16 +21,22 @@ function App() {
       // setToken (_token)
       dispatch({type: "SET_TOKEN", token: _token})
       spotify.setAccessToken(_token)
-    }
+      
 
-    spotify.getMe().then((user) => {
-      // console.log(user)
-      dispatch({
-        type: 'SET_USER',
-        user: user,
+      spotify.getMe().then((user) => {
+        // console.log(user)
+        dispatch({
+          type: 'SET_USER',
+          user: user,
+        })
       })
-    })
-    
+      spotify.getUserPlaylists().then((playlists) =>  {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists : playlists,
+        })
+      })
+    }
   }, []);
 
   // console.log(user);
